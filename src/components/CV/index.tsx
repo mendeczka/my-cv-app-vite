@@ -26,8 +26,8 @@ const cvData: CvData = {
 export const CV = () => {
     return (
         <main className='cv-main'>
-            <Header name={cvData.name} lastName={cvData.lastName}/>
-            <Personal lastName={cvData.lastName} name={cvData.name} position={cvData.position} photo={cvData.photo}/>
+            <Header name={cvData}/>
+            <Personal personal={cvData} />
             <Details details={cvData}/>
         </main>
     );

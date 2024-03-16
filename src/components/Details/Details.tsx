@@ -1,5 +1,5 @@
 import {H2Component} from "../H2Component.tsx";
-import {CvData} from "../../types/cv.ts";
+import {CvData, CvH2Enum} from "../../types/cv.ts";
 import "./Details.scss";
 
 type Props ={
@@ -9,7 +9,7 @@ export const Details = (props: Props) => {
 
     return (
         <section className='cv-details'>
-            <H2Component name="Experience"/>
+            <H2Component name={CvH2Enum.Experience}/>
             {/*<ExperienceD data={cvData.experience}/>*/}
             <ul>
                 {props.details.experience.map((experience, index) => (
@@ -18,7 +18,7 @@ export const Details = (props: Props) => {
                     </li>
                 ))}
             </ul>
-            <H2Component name="Education"/>
+            <H2Component name={CvH2Enum.Education}/>
             <ul>
                 {props.details.education.map((edu, i) => (
                     <li key={i}>

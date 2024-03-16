@@ -1,18 +1,16 @@
 import "./Personal.scss";
+import {CvPersonal} from "../../types/cv.ts";
 
 type Props = {
-    name: string;
-    lastName: string;
-    photo: string;
-    position: string;
+    personal: CvPersonal;
 };
 export const Personal = (props: Props) => {
     return (
         <aside className='cv-personal'>
             <h2>Personal data</h2>
-            <img className='cv-photo' src={props.photo} alt={`${props.name} ${props.lastName} profile photo`}/>
-            <p>{props.name} {props.lastName}</p>
-            <small>{props.position}</small>
+            <img className='cv-photo' src={props.personal.photo} alt={`${props.personal.name} ${props.personal.lastName} profile photo`}/>
+            <p>{props.personal.name} {props.personal.lastName}</p>
+            <small>{props.personal.position}</small>
         </aside>
     );
 };

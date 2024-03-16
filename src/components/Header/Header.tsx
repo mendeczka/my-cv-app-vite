@@ -1,13 +1,13 @@
 import "./Header.scss";
+import {CvHeader} from "../../types/cv.ts";
 
 type Props = {
-    name: string;
-    lastName: string;
+    name: CvHeader;
 };
 export const Header = (props: Props) => {
     return (
         <header className='cv-header'>
-            <h1>CV {props.name} {props.lastName}</h1>
+            <h1>CV {props.name.name} {props.name.lastName}</h1>
         </header>
     );
 };
