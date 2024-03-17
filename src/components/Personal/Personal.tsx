@@ -5,12 +5,13 @@ type Props = {
     personal: CvPersonal;
 };
 export const Personal = (props: Props) => {
+    const {name,lastName,position,photo} = props.personal;
     return (
         <aside className='cv-personal'>
             <h2>Personal data</h2>
-            <img className='cv-photo' src={props.personal.photo} alt={`${props.personal.name} ${props.personal.lastName} profile photo`}/>
-            <p>{props.personal.name} {props.personal.lastName}</p>
-            <small>{props.personal.position}</small>
+            <img className='cv-photo' src={photo} alt={`${name} ${lastName} profile photo`}/>
+            <p>{name} {lastName}</p>
+            <small>{position}</small>
         </aside>
     );
 };

@@ -26,7 +26,7 @@ const cvData: CvData = {
 export const CV = () => {
     return (
         <main className='cv-main'>
-            <Header name={cvData}/>
+            <Header data={cvData}/>
             <Personal personal={cvData} />
             <Details details={cvData}/>
         </main>
