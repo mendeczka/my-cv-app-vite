@@ -2,12 +2,7 @@ export interface Experience {
     year: number;
     description: string;
 }
-
-export interface CvData {
-    photo: string;
-    name: string;
-    lastName: string;
-    position: string;
+export interface CvDetails {
     experience: Experience[];
     education: string[];
 }
@@ -22,6 +17,11 @@ export interface CvPersonal {
     name: string;
     lastName: string;
     position: string;
+}
+
+export interface CvData {
+    personal: CvPersonal;
+    details: CvDetails;
 }
 
 export enum CvH2Enum {

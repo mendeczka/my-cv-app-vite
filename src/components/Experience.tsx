@@ -1,8 +1,5 @@
+import {Experience} from "../types/cv.ts";
 
-interface Experience {
-    year: number;
-    description: string;
-}
 interface Props {
     experience: Experience[];
 }

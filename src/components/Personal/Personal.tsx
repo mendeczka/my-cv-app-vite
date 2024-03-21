@@ -4,8 +4,8 @@ import {CvPersonal} from "../../types/cv.ts";
 type Props = {
     personal: CvPersonal;
 };
-export const Personal = (props: Props) => {
-    const {name,lastName,position,photo} = props.personal;
+export const Personal = ({personal: {name,lastName,position,photo}}: Props) => {
+    // const {name,lastName,position,photo} = props.personal;
     return (
         <aside className='cv-personal'>
             <h2>Personal data</h2>

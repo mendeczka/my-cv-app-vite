@@ -6,11 +6,14 @@ import {CvData} from "../../types/cv.ts";
 
 
 const cvData: CvData = {
-    photo: 'https://placehold.co/400x400?text=AG',
-    name: 'Arek',
-    lastName: "Grucha",
-    position: 'Kierownik',
-    experience: [
+    personal: {
+        photo: 'https://placehold.co/400x400?text=AG',
+        name: 'Arek',
+        lastName: "Grucha",
+        position: 'Kierownik',
+    },
+        details: {
+        experience: [
         {year: 2016, description: "Admin"},
         {year: 2020, description: "Kierownik"},
         {year: 2023, description: "Kierownik"},
@@ -20,15 +23,15 @@ const cvData: CvData = {
         "Dolor sit amet",
         "Arek ma kota"
     ]
-
+    }
 }
 
 export const CV = () => {
     return (
         <main className='cv-main'>
-            <Header data={cvData}/>
-            <Personal personal={cvData} />
-            <Details details={cvData}/>
+            <Header data={cvData.personal}/>
+            <Personal personal={cvData.personal} />
+            <Details details={cvData.details}/>
         </main>
     );
 };
